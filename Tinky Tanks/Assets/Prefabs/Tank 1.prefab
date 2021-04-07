@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2842047913914976396}
   - component: {fileID: 8712359978683741443}
   - component: {fileID: 3767921679863720032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1695162665}
   - component: {fileID: 1695162668}
   - component: {fileID: 1695162669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tank 1
   m_TagString: Tank 1
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 6702271017746238220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.797496, y: 5.7466, z: 5.7466}
+  m_LocalScale: {x: 6, y: 3, z: 2.3482907}
   m_Children:
   - {fileID: 2842047913914976396}
   m_Father: {fileID: 0}
@@ -210,7 +210,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannon: {fileID: 2385168933602500046}
+  cannonEnd: {fileID: 0}
   projectile: {fileID: 2792267072696932470, guid: deee1b362936a19439fb3671663f1203, type: 3}
+  gameEnd: {fileID: 1284355942634369461, guid: 9e740adcbe0303845be79ad611b21940, type: 3}
 --- !u!50 &1695162663
 Rigidbody2D:
   serializedVersion: 4
@@ -223,10 +225,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 20
   m_LinearDrag: 1
   m_AngularDrag: 1
-  m_GravityScale: 20
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -241,7 +243,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 6702271017746238220}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 36ac50d950c81864fbba61edca8c45d1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -257,7 +259,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 6702271017746238220}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 36ac50d950c81864fbba61edca8c45d1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -273,7 +275,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6702271017746238220}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 36ac50d950c81864fbba61edca8c45d1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
