@@ -9,6 +9,7 @@ public class ProjectileHandler : MonoBehaviour
     Rigidbody2D rigidbody;
     private Text playerTurnText;
     private Text windResistanceText;
+    public GameObject explosion;
 
     int wind;
 
@@ -71,21 +72,22 @@ public class ProjectileHandler : MonoBehaviour
 
     void destroyThis()
     {
+        Instantiate(explosion, transform.position, new Quaternion(0,0,0,0));
         Destroy(gameObject);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         
         if (wind == 2)
         {
-            rigidbody.AddForce(new Vector2(0.4f, 0));
+            rigidbody.AddForce(new Vector2(3f, 0));
         }
         else if (wind == 3)
         {
-            rigidbody.AddForce(new Vector2(-0.4f, 0));
+            rigidbody.AddForce(new Vector2(-3f, 0));
         }
 
 

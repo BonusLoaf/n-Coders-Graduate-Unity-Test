@@ -90,6 +90,16 @@ public class TankControls : MonoBehaviour
         {
 
             TurnSystem.movement = false;
+
+            if(cannon.transform.rotation.z > 0)
+            {
+                rigidbody.AddForce(new Vector2(5000, 0));
+            }
+            else
+            {
+                rigidbody.AddForce(new Vector2(-5000, 0));
+            }
+
             Instantiate(projectile, cannon.transform.position, cannon.transform.rotation);
             shots++;
             shotsFiredText.text = "Shots Fired: " + shots;
